@@ -1,0 +1,292 @@
+COVERGROUP COVERAGE:
+-----------------------------------------------------------------------------------------------
+Covergroup                                             Metric       Goal    Status               
+                                                                                              
+-----------------------------------------------------------------------------------------------
+ TYPE /axi4_testbench_top_sv_unit/axi4_coverages/axi4_cg 
+                                                       84.84%        100    Uncovered            
+    covered/total bins:                                    42         53                      
+    missing/total bins:                                    11         53                      
+    % Hit:                                             79.24%        100                      
+    Coverpoint axi4_cg::burst_cp                       66.66%        100    Uncovered            
+        covered/total bins:                                 2          3                      
+        missing/total bins:                                 1          3                      
+        % Hit:                                         66.66%        100                      
+        bin fixed                                          29          1    Covered              
+        bin incr                                           20          1    Covered              
+        bin wrap                                            0          1    ZERO                 
+        illegal_bin other                                   0               ZERO                 
+    Coverpoint axi4_cg::size_cp                       100.00%        100    Covered              
+        covered/total bins:                                 3          3                      
+        missing/total bins:                                 0          3                      
+        % Hit:                                        100.00%        100                      
+        bin byte1                                          14          1    Covered              
+        bin byte2                                          30          1    Covered              
+        bin byte4                                           5          1    Covered              
+        illegal_bin other                                   0               ZERO                 
+    Coverpoint axi4_cg::len_cp                         75.00%        100    Uncovered            
+        covered/total bins:                                 3          4                      
+        missing/total bins:                                 1          4                      
+        % Hit:                                         75.00%        100                      
+        bin single                                          0          1    ZERO                 
+        bin short                                           1          1    Covered              
+        bin medium1                                        21          1    Covered              
+        bin long                                           27          1    Covered              
+    Coverpoint axi4_cg::addr_cp                       100.00%        100    Covered              
+        covered/total bins:                                 3          3                      
+        missing/total bins:                                 0          3                      
+        % Hit:                                        100.00%        100                      
+        bin low                                             9          1    Covered              
+        bin mid                                             4          1    Covered              
+        bin high                                           36          1    Covered              
+    Coverpoint axi4_cg::id_cp                         100.00%        100    Covered              
+        covered/total bins:                                 2          2                      
+        missing/total bins:                                 0          2                      
+        % Hit:                                        100.00%        100                      
+        bin id_low                                         24          1    Covered              
+        bin id_high                                        25          1    Covered              
+    Coverpoint axi4_cg::is_write_cp                   100.00%        100    Covered              
+        covered/total bins:                                 2          2                      
+        missing/total bins:                                 0          2                      
+        % Hit:                                        100.00%        100                      
+        bin write                                          26          1    Covered              
+        bin read                                           23          1    Covered              
+    Cross axi4_cg::write_burst_cross                   66.66%        100    Uncovered            
+        covered/total bins:                                 4          6                      
+        missing/total bins:                                 2          6                      
+        % Hit:                                         66.66%        100                      
+        bin <read,fixed>                                   17          1    Covered              
+        bin <read,incr>                                     6          1    Covered              
+        bin write_fixed                                    12          1    Covered              
+        bin write_incr                                     14          1    Covered              
+        bin write_wrap                                      0          1    ZERO                 
+        bin <read,wrap>                                     0          1    ZERO                 
+    Cross axi4_cg::read_burst_cross                    66.66%        100    Uncovered            
+        covered/total bins:                                 4          6                      
+        missing/total bins:                                 2          6                      
+        % Hit:                                         66.66%        100                      
+        bin <write,fixed>                                  12          1    Covered              
+        bin <write,incr>                                   14          1    Covered              
+        bin read_fixed                                     17          1    Covered              
+        bin read_incr                                       6          1    Covered              
+        bin read_wrap                                       0          1    ZERO                 
+        bin <write,wrap>                                    0          1    ZERO                 
+    Cross axi4_cg::size_len_cross                      58.33%        100    Uncovered            
+        covered/total bins:                                 7         12                      
+        missing/total bins:                                 5         12                      
+        % Hit:                                         58.33%        100                      
+        bin <byte1,short>                                   1          1    Covered              
+        bin <byte1,medium1>                                 8          1    Covered              
+        bin <byte2,medium1>                                 9          1    Covered              
+        bin <byte4,medium1>                                 4          1    Covered              
+        bin <byte1,long>                                    5          1    Covered              
+        bin <byte2,long>                                   21          1    Covered              
+        bin <byte4,long>                                    1          1    Covered              
+        bin <byte1,single>                                  0          1    ZERO                 
+        bin <byte2,single>                                  0          1    ZERO                 
+        bin <byte4,single>                                  0          1    ZERO                 
+        bin <byte2,short>                                   0          1    ZERO                 
+        bin <byte4,short>                                   0          1    ZERO                 
+    Cross axi4_cg::write_size_cross                   100.00%        100    Covered              
+        covered/total bins:                                 6          6                      
+        missing/total bins:                                 0          6                      
+        % Hit:                                        100.00%        100                      
+        bin <read,byte1>                                    4          1    Covered              
+        bin <read,byte2>                                   17          1    Covered              
+        bin <read,byte4>                                    2          1    Covered              
+        bin write_1byte                                    10          1    Covered              
+        bin write_2byte                                    13          1    Covered              
+        bin write_4byte                                     3          1    Covered              
+    Cross axi4_cg::read_size_cross                    100.00%        100    Covered              
+        covered/total bins:                                 6          6                      
+        missing/total bins:                                 0          6                      
+        % Hit:                                        100.00%        100                      
+        bin <write,byte1>                                  10          1    Covered              
+        bin <write,byte2>                                  13          1    Covered              
+        bin <write,byte4>                                   3          1    Covered              
+        bin read_1byte                                      4          1    Covered              
+        bin read_2byte                                     17          1    Covered              
+        bin read_4byte                                      2          1    Covered              
+ Covergroup instance axi4_cg                           84.84%        100    Uncovered            
+    covered/total bins:                                    42         53                      
+    missing/total bins:                                    11         53                      
+    % Hit:                                             79.24%        100                      
+    Coverpoint burst_cp                                66.66%        100    Uncovered            
+        covered/total bins:                                 2          3                      
+        missing/total bins:                                 1          3                      
+        % Hit:                                         66.66%        100                      
+        bin fixed                                          29          1    Covered              
+        bin incr                                           20          1    Covered              
+        bin wrap                                            0          1    ZERO                 
+        illegal_bin other                                   0               ZERO                 
+    Coverpoint size_cp                                100.00%        100    Covered              
+        covered/total bins:                                 3          3                      
+        missing/total bins:                                 0          3                      
+        % Hit:                                        100.00%        100                      
+        bin byte1                                          14          1    Covered              
+        bin byte2                                          30          1    Covered              
+        bin byte4                                           5          1    Covered              
+        illegal_bin other                                   0               ZERO                 
+    Coverpoint len_cp                                  75.00%        100    Uncovered            
+        covered/total bins:                                 3          4                      
+        missing/total bins:                                 1          4                      
+        % Hit:                                         75.00%        100                      
+        bin single                                          0          1    ZERO                 
+        bin short                                           1          1    Covered              
+        bin medium1                                        21          1    Covered              
+        bin long                                           27          1    Covered              
+    Coverpoint addr_cp                                100.00%        100    Covered              
+        covered/total bins:                                 3          3                      
+        missing/total bins:                                 0          3                      
+        % Hit:                                        100.00%        100                      
+        bin low                                             9          1    Covered              
+        bin mid                                             4          1    Covered              
+        bin high                                           36          1    Covered              
+    Coverpoint id_cp                                  100.00%        100    Covered              
+        covered/total bins:                                 2          2                      
+        missing/total bins:                                 0          2                      
+        % Hit:                                        100.00%        100                      
+        bin id_low                                         24          1    Covered              
+        bin id_high                                        25          1    Covered              
+    Coverpoint is_write_cp                            100.00%        100    Covered              
+        covered/total bins:                                 2          2                      
+        missing/total bins:                                 0          2                      
+        % Hit:                                        100.00%        100                      
+        bin write                                          26          1    Covered              
+        bin read                                           23          1    Covered              
+    Cross write_burst_cross                            66.66%        100    Uncovered            
+        covered/total bins:                                 4          6                      
+        missing/total bins:                                 2          6                      
+        % Hit:                                         66.66%        100                      
+        bin <read,fixed>                                   17          1    Covered              
+        bin <read,incr>                                     6          1    Covered              
+        bin write_fixed                                    12          1    Covered              
+        bin write_incr                                     14          1    Covered              
+        bin write_wrap                                      0          1    ZERO                 
+        bin <read,wrap>                                     0          1    ZERO                 
+    Cross read_burst_cross                             66.66%        100    Uncovered            
+        covered/total bins:                                 4          6                      
+        missing/total bins:                                 2          6                      
+        % Hit:                                         66.66%        100                      
+        bin <write,fixed>                                  12          1    Covered              
+        bin <write,incr>                                   14          1    Covered              
+        bin read_fixed                                     17          1    Covered              
+        bin read_incr                                       6          1    Covered              
+        bin read_wrap                                       0          1    ZERO                 
+        bin <write,wrap>                                    0          1    ZERO                 
+    Cross size_len_cross                               58.33%        100    Uncovered            
+        covered/total bins:                                 7         12                      
+        missing/total bins:                                 5         12                      
+        % Hit:                                         58.33%        100                      
+        bin <byte1,short>                                   1          1    Covered              
+        bin <byte1,medium1>                                 8          1    Covered              
+        bin <byte2,medium1>                                 9          1    Covered              
+        bin <byte4,medium1>                                 4          1    Covered              
+        bin <byte1,long>                                    5          1    Covered              
+        bin <byte2,long>                                   21          1    Covered              
+        bin <byte4,long>                                    1          1    Covered              
+        bin <byte1,single>                                  0          1    ZERO                 
+        bin <byte2,single>                                  0          1    ZERO                 
+        bin <byte4,single>                                  0          1    ZERO                 
+        bin <byte2,short>                                   0          1    ZERO                 
+        bin <byte4,short>                                   0          1    ZERO                 
+    Cross write_size_cross                            100.00%        100    Covered              
+        covered/total bins:                                 6          6                      
+        missing/total bins:                                 0          6                      
+        % Hit:                                        100.00%        100                      
+        bin <read,byte1>                                    4          1    Covered              
+        bin <read,byte2>                                   17          1    Covered              
+        bin <read,byte4>                                    2          1    Covered              
+        bin write_1byte                                    10          1    Covered              
+        bin write_2byte                                    13          1    Covered              
+        bin write_4byte                                     3          1    Covered              
+    Cross read_size_cross                             100.00%        100    Covered              
+        covered/total bins:                                 6          6                      
+        missing/total bins:                                 0          6                      
+        % Hit:                                        100.00%        100                      
+        bin <write,byte1>                                  10          1    Covered              
+        bin <write,byte2>                                  13          1    Covered              
+        bin <write,byte4>                                   3          1    Covered              
+        bin read_1byte                                      4          1    Covered              
+        bin read_2byte                                     17          1    Covered              
+        bin read_4byte                                      2          1    Covered              
+
+TOTAL COVERGROUP COVERAGE: 84.84%  COVERGROUP TYPES: 1
+
+DIRECTIVE COVERAGE:
+---------------------------------------------------------------------------------------------
+Name                                     Design Design   Lang File(Line)      Count Status    
+                                         Unit   UnitType                                      
+---------------------------------------------------------------------------------------------
+/axi4_tb/vif/u_assertions/cover__cover_rlast 
+                                         axi4_assertions Verilog  SVA  C:/questasim64_10.7c/examples/work/axi4 PROJECT/axi4_assertions.sv(213)
+                                                                                 24 Covered   
+/axi4_tb/vif/u_assertions/cover__cover_wlast 
+                                         axi4_assertions Verilog  SVA  C:/questasim64_10.7c/examples/work/axi4 PROJECT/axi4_assertions.sv(206)
+                                                                                 26 Covered   
+/axi4_tb/vif/u_assertions/cover__cover_r_handshake 
+                                         axi4_assertions Verilog  SVA  C:/questasim64_10.7c/examples/work/axi4 PROJECT/axi4_assertions.sv(198)
+                                                                                207 Covered   
+/axi4_tb/vif/u_assertions/cover__cover_ar_handshake 
+                                         axi4_assertions Verilog  SVA  C:/questasim64_10.7c/examples/work/axi4 PROJECT/axi4_assertions.sv(191)
+                                                                                 24 Covered   
+/axi4_tb/vif/u_assertions/cover__cover_b_handshake 
+                                         axi4_assertions Verilog  SVA  C:/questasim64_10.7c/examples/work/axi4 PROJECT/axi4_assertions.sv(184)
+                                                                                 26 Covered   
+/axi4_tb/vif/u_assertions/cover__cover_w_handshake 
+                                         axi4_assertions Verilog  SVA  C:/questasim64_10.7c/examples/work/axi4 PROJECT/axi4_assertions.sv(177)
+                                                                                264 Covered   
+/axi4_tb/vif/u_assertions/cover__cover_aw_handshake 
+                                         axi4_assertions Verilog  SVA  C:/questasim64_10.7c/examples/work/axi4 PROJECT/axi4_assertions.sv(170)
+                                                                                 26 Covered   
+
+TOTAL DIRECTIVE COVERAGE: 100.00%  COVERS: 7
+
+ASSERTION RESULTS:
+--------------------------------------------------------------------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass     Vacuous    Disable    Attempt     Active Peak Active ATV
+                                                  Count        Count    Count      Count      Count       Count  Count          
+--------------------------------------------------------------------------------------------------------------------------------
+/axi4_tb/vif/u_assertions/assert__write_response_can_follow_w_p
+                     C:/questasim64_10.7c/examples/work/axi4 PROJECT/axi4_assertions.sv(157)
+                                                        0          1
+/axi4_tb/vif/u_assertions/assert__write_data_can_follow_aw_p
+                     C:/questasim64_10.7c/examples/work/axi4 PROJECT/axi4_assertions.sv(148)
+                                                        0          1
+/axi4_tb/vif/u_assertions/assert__rlast_with_rvalid_p
+                     C:/questasim64_10.7c/examples/work/axi4 PROJECT/axi4_assertions.sv(135)
+                                                        0          1
+/axi4_tb/vif/u_assertions/assert__rready_stable_p
+                     C:/questasim64_10.7c/examples/work/axi4 PROJECT/axi4_assertions.sv(126)
+                                                        0          0
+/axi4_tb/vif/u_assertions/assert__rvalid_stable_p
+                     C:/questasim64_10.7c/examples/work/axi4 PROJECT/axi4_assertions.sv(117)
+                                                        0          0
+/axi4_tb/vif/u_assertions/assert__arready_stable_p
+                     C:/questasim64_10.7c/examples/work/axi4 PROJECT/axi4_assertions.sv(104)
+                                                        0          1
+/axi4_tb/vif/u_assertions/assert__arvalid_stable_p
+                     C:/questasim64_10.7c/examples/work/axi4 PROJECT/axi4_assertions.sv(95)
+                                                        0          0
+/axi4_tb/vif/u_assertions/assert__bready_stable_p
+                     C:/questasim64_10.7c/examples/work/axi4 PROJECT/axi4_assertions.sv(82)
+                                                        0          0
+/axi4_tb/vif/u_assertions/assert__bvalid_stable_p
+                     C:/questasim64_10.7c/examples/work/axi4 PROJECT/axi4_assertions.sv(73)
+                                                        0          0
+/axi4_tb/vif/u_assertions/assert__wready_stable_p
+                     C:/questasim64_10.7c/examples/work/axi4 PROJECT/axi4_assertions.sv(53)
+                                                        0          0
+/axi4_tb/vif/u_assertions/assert__wvalid_stable_p
+                     C:/questasim64_10.7c/examples/work/axi4 PROJECT/axi4_assertions.sv(44)
+                                                        0          1
+/axi4_tb/vif/u_assertions/assert__awready_stable_p
+                     C:/questasim64_10.7c/examples/work/axi4 PROJECT/axi4_assertions.sv(31)
+                                                        0          1
+/axi4_tb/vif/u_assertions/assert__awvalid_stable_p
+                     C:/questasim64_10.7c/examples/work/axi4 PROJECT/axi4_assertions.sv(22)
+                                                        0          1
+/axi4_testbench_top_sv_unit/axi4_generator/run_generator/#ublk#13585332#56/immed__58
+                     axi4_generator.sv(59)              0          1          0          0          1          0           0 off
+/axi4_testbench_top_sv_unit/axi4_generator/run_generator/#ublk#13585332#78/immed__85
+                     axi4_generator.sv(86)              0         25          0          0         25          0           0 off
